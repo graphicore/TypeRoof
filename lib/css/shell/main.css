@@ -1397,7 +1397,7 @@ select and drag
 
 .ui_base_map-tools {
     display: inline-block;
-    margin-left: 0.5em;
+    /*margin-left: 0.5em;*/
     vertical-align: middle;
     /* stylelint-disable-next-line declaration-property-value-no-unknown */
     vertical-align: -webkit-baseline-middle;
@@ -1407,14 +1407,17 @@ select and drag
     display: none;
 }
 
-.ui_node_spec_map-tools > *,
-.ui_style_patches_map-tools > *,
-.ui_links_map-tools > * {
-    display: initial;
-}
+.ui_node_spec_map-tools,
+.ui_style_patches_map-tools,
+.ui_links_map-tools {
+    & > * {
+        display: initial;
+    }
 
-.ui_links_map-tools > .ui_generic_select {
-    display: flex;
+    & > .ui_links_map-key-create > .ui_generic_select,
+    & > .ui_generic_select {
+        display: block;
+    }
 }
 
 .ui_node_spec_to_type_spec_links_map-tools > * {
@@ -1454,7 +1457,7 @@ select and drag
 }
 
 .ui_links_map-tools.ui_links_map-tools:focus-within > .ui_generic_select {
-    display: flex;
+    display: block;
 }
 
 .ui_links_map-item_value {
