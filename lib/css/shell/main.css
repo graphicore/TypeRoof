@@ -1332,8 +1332,13 @@ select and drag
     }
 }
 
-:is(.ui_axes_math-map-item, .ui_base_map-item)
-    > :is(.ui_axes_math-axis_tag, .ui_base_map-key) {
+:is(.ui_base_map-item)
+    > :is(.ui_base_map-key) {
+    padding-right: var(--padding-horizontal);
+}
+
+:is(.ui_axes_math-map-item)
+    > :is(.ui_axes_math-axis_tag,) {
     padding-right: var(--padding-horizontal);
     .ui_base_map-key-input {
         margin-inline: .25em;
