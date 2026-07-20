@@ -1,7 +1,4 @@
-import {
-    _BaseComponent,
-    _BaseContainerComponent,
-} from "../../basics.mjs";
+import { _BaseComponent, _BaseContainerComponent } from "../../basics.mjs";
 import { Path } from "../../../metamodel.mjs";
 import { COLOR } from "../../registered-properties-definitions.mjs";
 import { actorApplyCSSColors } from "../../actors/properties-util.mjs";
