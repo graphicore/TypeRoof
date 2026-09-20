@@ -27,5 +27,15 @@ export default defineConfig({
     test: {
         include: ['lib/js/**/*.test.mjs'],
         exclude: ['lib/js/vendor/**', '**/node_modules/**'],
+        coverage: {
+            provider: 'v8',
+            reporter: ['text', 'html'],
+            exclude: [
+                'lib/js/vendor/**',
+                '**/node_modules/**',
+                '**/*.test.mjs',
+                '**/tests/**',
+            ],
+        },
     },
 });
