@@ -165,6 +165,8 @@ prosemirror
 
     & > [data-node-content] {
         grid-area: content;
+        /* this element receives the padding and width */
+        box-sizing: border-box;
     }
 
     & > .ui-parameters-display {
@@ -264,6 +266,9 @@ prosemirror
 .typeroof-document *[data-node-type] {
     padding: var(--space-before) 0 var(--space-after) 0;
     line-height: var(--line-height);
+
+    /* this element receives the padding and width */
+    box-sizing: border-box;
 
     /* In order to achive a pixel-perfect match between the prosemirror
      * elements and the document, this switches the layout engine to treat
